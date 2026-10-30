@@ -1,0 +1,31 @@
+body { margin:0; padding:20px 12px; text-align:center; background:#89CFF0; font-family:Arial,sans-serif; color:#19384b; }
+h1 { color:darkblue; }
+.gallery { width:92%; max-width:750px; margin:22px auto; display:grid; }
+.photo { grid-area:1 / 1; margin:0; visibility:hidden; animation:showPhoto 32s steps(1,end) infinite; }
+.photo img { width:100%; height:min(65vh,600px); object-fit:contain; background:white; border-radius:12px; box-shadow:0 3px 14px #0002; }
+figcaption { margin:12px; }
+@keyframes showPhoto {
+  0%, 12.499% { visibility:visible; }
+  12.5%, 100% { visibility:hidden; }
+}
+.photo1 { animation-delay: 0s; }
+.photo2 { animation-delay: -4s; }
+.photo3 { animation-delay: -8s; }
+.photo4 { animation-delay: -12s; }
+.photo5 { animation-delay: -16s; }
+.photo6 { animation-delay: -20s; }
+.photo7 { animation-delay: -24s; }
+.photo8 { animation-delay: -28s; }
+
+/* Smooth, repeating title movement */
+h1 {
+    display: inline-block;
+    animation: titleFloat 3s ease-in-out infinite;
+}
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    h1 { animation: none; }
+}
